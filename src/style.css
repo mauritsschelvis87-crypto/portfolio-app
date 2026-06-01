@@ -145,6 +145,15 @@ body {
   background: rgba(0,0,0,0.15);
 }
 
+.footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: #FFD43B;
+}
+
 @media (max-width: 900px) {
   .projects {
     grid-template-columns: 1fr;

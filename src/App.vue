@@ -43,7 +43,12 @@
           </ul>
         </div>
 
-        <a class="btn">View project</a>
+        <a
+          class="btn"
+          href="http://178.105.245.202:8082/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >View project</a>
       </div>
 
       <div class="project">
@@ -80,7 +85,12 @@
           </ul>
         </div>
 
-        <a class="btn">View project</a>
+        <a
+          class="btn"
+          href="http://178.105.245.202:8080/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >View project</a>
       </div>
 
     </section>
@@ -88,6 +98,14 @@
     <footer class="footer">
       <span>Email: mauritsschelvis87@gmail.com</span>
       <span>Telefoonnummer: 0633866035</span>
+      <span>
+        LinkedIn:
+        <a
+          href="https://www.linkedin.com/in/maurits-schelvis-9107113aa/?skipRedirect=true"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Profiel</a>
+      </span>
     </footer>
 
   </div>
