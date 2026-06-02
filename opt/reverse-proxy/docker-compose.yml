@@ -1,0 +1,25 @@
+services:
+  nginx:
+    image: nginx:stable-alpine
+    container_name: reverse-proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "8080:8080"
+      - "8082:8082"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    networks:
+      - proxy
+      - homecinema
+      - medical
+
+networks:
+  proxy:
+    driver: bridge
+  homecinema:
+    external: true
+    name: homecinema-deploy_default
+  medical:
+    external: true
+    name: medical-data-platform_medical-net

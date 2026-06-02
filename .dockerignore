@@ -1,0 +1,10 @@
+node_modules
+dist
+.git
+.github
+.idea
+.vscode
+deploy
+opt
+*.md
+new.sh

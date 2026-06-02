@@ -1,5 +1,5 @@
-# Stage 1: Build the React application
-FROM node:20-alpine as builder
+# Stage 1: Build the Vue application
+FROM node:20-alpine AS builder
 
 WORKDIR /app
 
