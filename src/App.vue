@@ -14,7 +14,7 @@
           <h2>Medisch AI Platform</h2>
 
           <p>
-            SOA(P)-artsenportaal met een AI-model voor medische voorspellingen op basis van vitale waarden.
+            SOAP-artsenportaal met een AI-model voor medische voorspellingen op basis van vitale waarden.
           </p>
 
           <h3 class="tools-title">Tools:</h3>
