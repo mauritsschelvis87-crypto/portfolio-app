@@ -1,6 +1,6 @@
 services:
   portfolio:
-    image: mauritsschelvis87/portfolio-page:latest
+    image: mauritsschelvis87-crypto/portfolio-page:latest
     container_name: portfolio
     restart: unless-stopped
     networks:
