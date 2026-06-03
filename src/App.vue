@@ -45,7 +45,7 @@
 
         <a
           class="btn"
-          href="http://178.105.245.202:8082/"
+          href="http://medical.maurits-portfolio.nl/"
           target="_blank"
           rel="noopener noreferrer"
         >View project</a>
@@ -87,7 +87,7 @@
 
         <a
           class="btn"
-          href="http://178.105.245.202:8080/"
+          href="http://films.maurits-portfolio.nl/"
           target="_blank"
           rel="noopener noreferrer"
         >View project</a>

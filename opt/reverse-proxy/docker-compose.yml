@@ -9,6 +9,7 @@ services:
       - "8082:8082"
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./certbot/www:/var/www/certbot:ro
     networks:
       - proxy
       - homecinema
