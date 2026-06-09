@@ -45,7 +45,7 @@
 
         <a
           class="btn"
-          href="http://medical.maurits-portfolio.nl/"
+          href="https://medical.maurits-portfolio.nl/"
           target="_blank"
           rel="noopener noreferrer"
         >View project</a>
@@ -87,7 +87,7 @@
 
         <a
           class="btn"
-          href="http://films.maurits-portfolio.nl/"
+          href="https://films.maurits-portfolio.nl/"
           target="_blank"
           rel="noopener noreferrer"
         >View project</a>
