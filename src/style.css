@@ -37,11 +37,13 @@ body {
 .projects {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(3, 380px);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 380px));
   justify-content: center;
   align-content: start;
   gap: 40px;
   padding: 10px 6%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .project {
@@ -91,13 +93,31 @@ body {
   width: 42px;
   height: 42px;
   background: white;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 0.7rem;
   opacity: 0;
   transform: translateX(-10px);
   transition: 0.25s ease;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.tool-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+img.tool-image {
+  object-fit: contain;
+}
+
+.tool-image.tool-image-ts img {
+  transform: scale(1.8);
+  transform-origin: center center;
 }
 
 .tool-image.visible {
@@ -154,21 +174,11 @@ body {
   color: #FFD43B;
 }
 
-@media (max-width: 1280px) {
-  .projects {
-    grid-template-columns: repeat(2, 380px);
-  }
-}
-
 @media (max-width: 900px) {
-  .projects {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-
   .project {
-    width: 90%;
+    width: 100%;
     max-width: 420px;
+    justify-self: center;
   }
 
   .footer {

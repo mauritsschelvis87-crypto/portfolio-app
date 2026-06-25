@@ -106,14 +106,14 @@
           <div v-if="stage < 1" class="spinner"></div>
 
           <div v-if="stage >= 1" class="tool-images">
-            <img
+            <span
                 v-for="(t, i) in project3Tools"
                 :key="t"
                 class="tool-image"
-                :class="{ visible: i < icons3 }"
-                :src="getImage(t)"
-                alt="tool"
-            />
+                :class="{ visible: i < icons3, 'tool-image-ts': t === 'TypeScript' }"
+            >
+              <img :src="getImage(t)" alt="tool" />
+            </span>
           </div>
 
           <ul v-if="stage >= 2" class="tool-list">
