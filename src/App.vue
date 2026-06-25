@@ -95,7 +95,7 @@
 
       <div class="project">
         <div>
-          <h2>Marco Polo Project</h2>
+          <h2>Vue Frontend Project</h2>
 
           <p>
             Interactieve website over de reizen van Marco Polo met kaart, verhalen en quiz.
@@ -129,7 +129,7 @@
 
         <a
           class="btn"
-          href="https://school.maurits-portfolio.nl/"
+          href="https://maurits-portfolio.nl/marco-polo/"
           target="_blank"
           rel="noopener noreferrer"
         >View project</a>
