@@ -12,6 +12,7 @@ docker run --rm \
   -d maurits-portfolio.nl \
   -d www.maurits-portfolio.nl \
   -d films.maurits-portfolio.nl \
-  -d medical.maurits-portfolio.nl
+  -d medical.maurits-portfolio.nl \
+  -d school.maurits-portfolio.nl
 docker compose up -d
 docker exec reverse-proxy nginx -s reload

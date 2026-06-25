@@ -93,6 +93,48 @@
         >View project</a>
       </div>
 
+      <div class="project">
+        <div>
+          <h2>Marco Polo Project</h2>
+
+          <p>
+            Interactieve website over de reizen van Marco Polo met kaart, verhalen en quiz.
+          </p>
+
+          <h3 class="tools-title">Tools:</h3>
+
+          <div v-if="stage < 1" class="spinner"></div>
+
+          <div v-if="stage >= 1" class="tool-images">
+            <img
+                v-for="(t, i) in project3Tools"
+                :key="t"
+                class="tool-image"
+                :class="{ visible: i < icons3 }"
+                :src="getImage(t)"
+                alt="tool"
+            />
+          </div>
+
+          <ul v-if="stage >= 2" class="tool-list">
+            <li
+                v-for="(t, i) in project3List"
+                :key="t"
+                :class="{ visible: i < list3 }"
+            >
+              {{ t }}
+            </li>
+          </ul>
+        </div>
+
+        <a
+          class="btn"
+          href="https://school.maurits-portfolio.nl/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >View project</a>
+      </div>
+
     </section>
 
     <footer class="footer">
@@ -122,6 +164,7 @@ import pandasImg from './assets/pandas.png'
 import scikitImg from './assets/scikit.png'
 import springbootImg from './assets/springboot.png'
 import postgresImg from './assets/postgres.png'
+import vueImg from './assets/vue.svg'
 
 const fullText = 'My Projects'
 const displayedText = ref('')
@@ -131,15 +174,20 @@ const stage = ref(0)
 
 const icons1 = ref(0)
 const icons2 = ref(0)
+const icons3 = ref(0)
 const list1 = ref(0)
 const list2 = ref(0)
+const list3 = ref(0)
 
 const project1Tools = ['Python', 'Scikit', 'Pandas', 'NumPy', 'Angular', 'FastAPI']
 
 const project2Tools = ['Angular', 'Spring Boot', 'FastAPI', 'PostgreSQL']
 
+const project3Tools = ['Vue', 'TypeScript', 'Vite']
+
 const project1List = ['Python', 'Scikit-learn', 'Pandas', 'NumPY', 'Angular', 'FastAPI']
 const project2List = ['Angular', 'FastAPI', 'Spring Boot', 'PostgreSQL']
+const project3List = ['Vue 3', 'TypeScript', 'Vite', 'Vue Router']
 
 const getImage = (name) => {
   switch (name) {
@@ -151,6 +199,9 @@ const getImage = (name) => {
     case 'Scikit': return scikitImg
     case 'Spring Boot': return springbootImg
     case 'PostgreSQL': return postgresImg
+    case 'Vue': return vueImg
+    case 'TypeScript': return vueImg
+    case 'Vite': return vueImg
     default: return pythonImg
   }
 }
@@ -173,6 +224,10 @@ onMounted(() => {
       setTimeout(() => icons2.value = i + 1, i * 90)
     })
 
+    project3Tools.forEach((_, i) => {
+      setTimeout(() => icons3.value = i + 1, i * 90)
+    })
+
   }, 700)
 
   setTimeout(() => {
@@ -184,6 +239,10 @@ onMounted(() => {
 
     project2List.forEach((_, i) => {
       setTimeout(() => list2.value = i + 1, i * 70)
+    })
+
+    project3List.forEach((_, i) => {
+      setTimeout(() => list3.value = i + 1, i * 70)
     })
 
   }, 1700)

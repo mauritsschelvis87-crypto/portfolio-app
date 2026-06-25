@@ -37,7 +37,7 @@ body {
 .projects {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 420px);
+  grid-template-columns: repeat(3, 380px);
   justify-content: center;
   align-content: start;
   gap: 40px;
@@ -152,6 +152,12 @@ body {
 
 .footer a:hover {
   color: #FFD43B;
+}
+
+@media (max-width: 1280px) {
+  .projects {
+    grid-template-columns: repeat(2, 380px);
+  }
 }
 
 @media (max-width: 900px) {
