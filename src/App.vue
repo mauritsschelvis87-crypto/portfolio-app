@@ -165,6 +165,8 @@ import scikitImg from './assets/scikit.png'
 import springbootImg from './assets/springboot.png'
 import postgresImg from './assets/postgres.png'
 import vueImg from './assets/vue.svg'
+import viteImg from './assets/logo2.svg'
+import tsImg from './assets/ts.png'
 
 const fullText = 'My Projects'
 const displayedText = ref('')
@@ -183,11 +185,11 @@ const project1Tools = ['Python', 'Scikit', 'Pandas', 'NumPy', 'Angular', 'FastAP
 
 const project2Tools = ['Angular', 'Spring Boot', 'FastAPI', 'PostgreSQL']
 
-const project3Tools = ['Vue', 'TypeScript', 'Vite']
+const project3Tools = ['Vue 3', 'TypeScript', 'Vite']
 
 const project1List = ['Python', 'Scikit-learn', 'Pandas', 'NumPY', 'Angular', 'FastAPI']
 const project2List = ['Angular', 'FastAPI', 'Spring Boot', 'PostgreSQL']
-const project3List = ['Vue 3', 'TypeScript', 'Vite', 'Vue Router']
+const project3List = ['Vue 3', 'TypeScript', 'Vite']
 
 const getImage = (name) => {
   switch (name) {
@@ -199,9 +201,9 @@ const getImage = (name) => {
     case 'Scikit': return scikitImg
     case 'Spring Boot': return springbootImg
     case 'PostgreSQL': return postgresImg
-    case 'Vue': return vueImg
-    case 'TypeScript': return vueImg
-    case 'Vite': return vueImg
+    case 'Vue 3': return vueImg
+    case 'TypeScript': return tsImg
+    case 'Vite': return viteImg
     default: return pythonImg
   }
 }
