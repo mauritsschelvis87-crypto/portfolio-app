@@ -20,6 +20,7 @@ Klik **DNS wijzigen** en zet deze records:
 | A | `www` | `178.105.245.202` |
 | A | `films` | `178.105.245.202` |
 | A | `medical` | `178.105.245.202` |
+| A | `school` | `178.105.245.202` |
 
 ### AAAA-records (IPv6) — dit lost de parkeerpagina op
 
@@ -31,6 +32,7 @@ Verwijder oude AAAA-records met `2a06:2ec0:1::ffed` (ZXCS) en zet ze op je Hetzn
 | AAAA | `www` | `2a01:4f8:c015:b799::1` |
 | AAAA | `films` | `2a01:4f8:c015:b799::1` |
 | AAAA | `medical` | `2a01:4f8:c015:b799::1` |
+| AAAA | `school` | `2a01:4f8:c015:b799::1` |
 
 **Alternatief:** verwijder alle AAAA-records als je geen IPv6 wilt gebruiken.
 
@@ -52,6 +54,7 @@ Nameservers blijven:
 | Portfolio | https://maurits-portfolio.nl |
 | Film webshop | https://films.maurits-portfolio.nl |
 | Medisch platform | https://medical.maurits-portfolio.nl |
+| Marco Polo project | https://school.maurits-portfolio.nl |
 
 HTTP wordt automatisch doorgestuurd naar HTTPS.
 
