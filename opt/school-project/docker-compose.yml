@@ -1,0 +1,12 @@
+services:
+  school-project:
+    image: s1156856/school-project:latest
+    container_name: school-project
+    restart: unless-stopped
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
+    name: reverse-proxy_proxy
