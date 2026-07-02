@@ -95,10 +95,10 @@
 
       <div class="project">
         <div>
-          <h2>Vue Frontend Project</h2>
+          <h2>Revit Bibliotheek</h2>
 
           <p>
-            Interactieve website over de reizen van Marco Polo met kaart, verhalen en quiz.
+            WPF desktop-app voor het doorzoeken en beheren van Revit-families op een netwerkschijf-bibliotheek.
           </p>
 
           <h3 class="tools-title">Tools:</h3>
@@ -110,7 +110,7 @@
                 v-for="(t, i) in project3Tools"
                 :key="t"
                 class="tool-image"
-                :class="{ visible: i < icons3, 'tool-image-ts': t === 'TypeScript' }"
+                :class="{ visible: i < icons3 }"
             >
               <img :src="getImage(t)" alt="tool" />
             </span>
@@ -129,7 +129,7 @@
 
         <a
           class="btn"
-          href="https://maurits-portfolio.nl/marco-polo/"
+          href="/revit-bibliotheek/"
           target="_blank"
           rel="noopener noreferrer"
         >View project</a>
@@ -164,9 +164,10 @@ import pandasImg from './assets/pandas.png'
 import scikitImg from './assets/scikit.png'
 import springbootImg from './assets/springboot.png'
 import postgresImg from './assets/postgres.png'
-import vueImg from './assets/vue.svg'
-import viteImg from './assets/logo2.svg'
-import tsImg from './assets/ts.png'
+import csharpImg from './assets/csharp.svg'
+import dotnetImg from './assets/dotnet.svg'
+import wpfImg from './assets/wpf.svg'
+import sqliteImg from './assets/sqlite.svg'
 
 const fullText = 'My Projects'
 const displayedText = ref('')
@@ -185,11 +186,11 @@ const project1Tools = ['Python', 'Scikit', 'Pandas', 'NumPy', 'Angular', 'FastAP
 
 const project2Tools = ['Angular', 'Spring Boot', 'FastAPI', 'PostgreSQL']
 
-const project3Tools = ['Vue 3', 'TypeScript', 'Vite']
+const project3Tools = ['C#', '.NET', 'WPF', 'SQLite']
 
 const project1List = ['Python', 'Scikit-learn', 'Pandas', 'NumPY', 'Angular', 'FastAPI']
 const project2List = ['Angular', 'FastAPI', 'Spring Boot', 'PostgreSQL']
-const project3List = ['Vue 3', 'TypeScript', 'Vite']
+const project3List = ['C#', '.NET 10', 'WPF', 'SQLite']
 
 const getImage = (name) => {
   switch (name) {
@@ -201,9 +202,10 @@ const getImage = (name) => {
     case 'Scikit': return scikitImg
     case 'Spring Boot': return springbootImg
     case 'PostgreSQL': return postgresImg
-    case 'Vue 3': return vueImg
-    case 'TypeScript': return tsImg
-    case 'Vite': return viteImg
+    case 'C#': return csharpImg
+    case '.NET': return dotnetImg
+    case 'WPF': return wpfImg
+    case 'SQLite': return sqliteImg
     default: return pythonImg
   }
 }
