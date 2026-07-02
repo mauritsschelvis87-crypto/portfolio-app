@@ -156,13 +156,33 @@ img.tool-image {
 }
 
 .footer {
-  height: 50px;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 6%;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.15);
+}
+
+.footer-center {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  background: rgba(0,0,0,0.15);
+  flex: 1;
+}
+
+.footer-origins {
+  color: #FFD43B;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.footer-origins:hover {
+  text-decoration: underline;
 }
 
 .footer a {
@@ -184,6 +204,11 @@ img.tool-image {
   .footer {
     flex-direction: column;
     height: auto;
-    padding: 10px;
+    padding: 12px 6%;
+  }
+
+  .footer-center {
+    flex-direction: column;
+    gap: 8px;
   }
 }

@@ -93,61 +93,28 @@
         >View project</a>
       </div>
 
-      <div class="project">
-        <div>
-          <h2>Revit Bibliotheek</h2>
-
-          <p>
-            WPF desktop-app voor het doorzoeken en beheren van Revit-families op een netwerkschijf-bibliotheek.
-          </p>
-
-          <h3 class="tools-title">Tools:</h3>
-
-          <div v-if="stage < 1" class="spinner"></div>
-
-          <div v-if="stage >= 1" class="tool-images">
-            <span
-                v-for="(t, i) in project3Tools"
-                :key="t"
-                class="tool-image"
-                :class="{ visible: i < icons3 }"
-            >
-              <img :src="getImage(t)" alt="tool" />
-            </span>
-          </div>
-
-          <ul v-if="stage >= 2" class="tool-list">
-            <li
-                v-for="(t, i) in project3List"
-                :key="t"
-                :class="{ visible: i < list3 }"
-            >
-              {{ t }}
-            </li>
-          </ul>
-        </div>
-
-        <a
-          class="btn"
-          href="/revit-bibliotheek/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >View project</a>
-      </div>
-
     </section>
 
     <footer class="footer">
-      <span>Email: mauritsschelvis87@gmail.com</span>
-      <span>Telefoonnummer: 0633866035</span>
-      <span>
-        LinkedIn:
-        <a
-          href="https://www.linkedin.com/in/maurits-schelvis-9107113aa/?skipRedirect=true"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Profiel</a>
-      </span>
+      <a
+        class="footer-origins"
+        href="https://maurits-portfolio.nl/origins/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Origins</a>
+
+      <div class="footer-center">
+        <span>Email: mauritsschelvis87@gmail.com</span>
+        <span>Telefoonnummer: 0633866035</span>
+        <span>
+          LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/maurits-schelvis-9107113aa/?skipRedirect=true"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Profiel</a>
+        </span>
+      </div>
     </footer>
 
   </div>
@@ -164,10 +131,6 @@ import pandasImg from './assets/pandas.png'
 import scikitImg from './assets/scikit.png'
 import springbootImg from './assets/springboot.png'
 import postgresImg from './assets/postgres.png'
-import csharpImg from './assets/csharp.svg'
-import dotnetImg from './assets/dotnet.svg'
-import wpfImg from './assets/wpf.svg'
-import sqliteImg from './assets/sqlite.svg'
 
 const fullText = 'My Projects'
 const displayedText = ref('')
@@ -177,20 +140,15 @@ const stage = ref(0)
 
 const icons1 = ref(0)
 const icons2 = ref(0)
-const icons3 = ref(0)
 const list1 = ref(0)
 const list2 = ref(0)
-const list3 = ref(0)
 
 const project1Tools = ['Python', 'Scikit', 'Pandas', 'NumPy', 'Angular', 'FastAPI']
 
 const project2Tools = ['Angular', 'Spring Boot', 'FastAPI', 'PostgreSQL']
 
-const project3Tools = ['C#', '.NET', 'WPF', 'SQLite']
-
 const project1List = ['Python', 'Scikit-learn', 'Pandas', 'NumPY', 'Angular', 'FastAPI']
 const project2List = ['Angular', 'FastAPI', 'Spring Boot', 'PostgreSQL']
-const project3List = ['C#', '.NET 10', 'WPF', 'SQLite']
 
 const getImage = (name) => {
   switch (name) {
@@ -202,10 +160,6 @@ const getImage = (name) => {
     case 'Scikit': return scikitImg
     case 'Spring Boot': return springbootImg
     case 'PostgreSQL': return postgresImg
-    case 'C#': return csharpImg
-    case '.NET': return dotnetImg
-    case 'WPF': return wpfImg
-    case 'SQLite': return sqliteImg
     default: return pythonImg
   }
 }
@@ -228,10 +182,6 @@ onMounted(() => {
       setTimeout(() => icons2.value = i + 1, i * 90)
     })
 
-    project3Tools.forEach((_, i) => {
-      setTimeout(() => icons3.value = i + 1, i * 90)
-    })
-
   }, 700)
 
   setTimeout(() => {
@@ -243,10 +193,6 @@ onMounted(() => {
 
     project2List.forEach((_, i) => {
       setTimeout(() => list2.value = i + 1, i * 70)
-    })
-
-    project3List.forEach((_, i) => {
-      setTimeout(() => list3.value = i + 1, i * 70)
     })
 
   }, 1700)
