@@ -14,6 +14,7 @@ Elk project heeft hetzelfde patroon:
 | Film webshop | `/opt/homecinema/homecinema-deploy/` |
 | Medical | `/opt/medical-data-platform/deploy/` |
 | Marco Polo | `/opt/school-project/` |
+| Origins (Flutter) | `/opt/origins/` |
 | Nginx | `/opt/reverse-proxy/` |
 
 ## Update op server
@@ -23,6 +24,7 @@ cd /opt/portfolio && ./update.sh
 cd /opt/homecinema/homecinema-deploy && ./update.sh
 cd /opt/medical-data-platform/deploy && ./update.sh
 cd /opt/school-project && ./update.sh
+cd /opt/origins && ./update.sh
 ```
 
 ## Docker Hub images
@@ -34,3 +36,4 @@ cd /opt/school-project && ./update.sh
 - `s1156856/medical-backend:latest`
 - `s1156856/medical-ai-service:latest`
 - `s1156856/school-project:latest`
+- `s1156856/origins-game:latest`

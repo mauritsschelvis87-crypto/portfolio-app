@@ -1,0 +1,12 @@
+services:
+  origins-game:
+    image: s1156856/origins-game:latest
+    container_name: origins-game
+    restart: unless-stopped
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
+    name: reverse-proxy_proxy
